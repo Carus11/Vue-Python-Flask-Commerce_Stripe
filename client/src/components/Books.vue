@@ -253,7 +253,7 @@ export default {
 					this.showMessage = true;
 				})
 				.catch((error) => {
-					// es-lint-disable-next-line
+					// eslint-disable-next-line
 					console.error(error);
 					this.getBooks();
 				});
