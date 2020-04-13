@@ -13,14 +13,14 @@
   color: #2c3e50;
 
   margin: 0 auto;
-  margin-top: 60px;
+  /*margin-top: 60px;
   padding: 10px 20px;
 
-  min-width: 60px;
+  min-width: 60px;*/
   width: fit-content;
-  border-radius: 15px;
+ /* border-radius: 15px; */
 
-  background-color: rgb(226, 208, 202);
+  /* background-color: rgb(226, 208, 202); */
   color: darkcyan;
 
 }
@@ -38,68 +38,30 @@
   color: #42b983;
 }
 
-/* --------------Books---------------- */
+/* --------------Games---------------- */
 .table-wrap {
   display: flex;
   flex-direction: column;
 
-  padding: 20px;
+	margin: 0 auto;
+  margin-top: 60px;
+  padding: 10px 20px;
 
-  border: 2px solid darkslategrey
+  min-width: 60px;
+  width: fit-content;
+
+	background: rgb(239,85,44);
+	background: linear-gradient(180deg, rgba(239,85,44,1) 0%, rgba(247,189,52,1) 100%);
+	background-clip: padding-box;
+	border-radius: 15px;
+	border: 1px outset #ec5920;
+	color: black;
 }
 
 .table-wrap > h1 {
   width: 75vw;
   text-align: left;
 }
-
-/* -----------------Product table buttons------------------------- */
-.button-group {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: flex-end;
-}
-
-.table-wrap .button,
-.table-wrap .button .rent {
-	display: block;
-	flex-grow: 1;
-  margin: 5px 5px;
-  padding: 10px 20px;
-
-	width: 15ch;
-  /* width: fit-content; */
-
-	font-size: 14px;
-
-  border: none;
-  border-radius: 10px;
-
-  cursor: pointer;
-}
-
-.add {
-  background-color: rgb(16, 150, 139);
-}
-
-.update {
-  background-color: rgb(155, 109, 207);
-}
-
-.delete {
-  background-color: crimson;
-}
-/* Since Rent is actually a router-link that generates an achor tag from an endpoint and product ID, it will require some*/
- /*separate, special styling, though it is under the button section, because functionally, it will have the same purpose  */
-.rent {
-	box-sizing: border-box;
-	/* display: block; */
-	text-decoration: none;
-	color: black;
-	background-color: deeppink;
-}
-/* -------------------------------------------------------------------------------------- */
 
 .table {
   display: flex;
@@ -130,7 +92,74 @@ tbody > tr > td {
  /* margin: auto; */
 }
 
+/* -----------------Product table buttons------------------------- */
+.button-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.table-wrap .button,
+.table-wrap .button .rent {
+	display: block;
+	flex-grow: 1;
+	margin: .5rem .75rem .25rem 0;
+	padding: .5rem;
+
+	width: 15ch;
+
+	font-size: 14px;
+
+  border: none;
+	border-radius: 15px;
+
+	background: rgba(0, 0, 0, 0.4);
+
+	cursor: pointer;
+	transition: all .2s ease-in;
+}
+
+.table-wrap .button.add {
+	margin-bottom: .75rem;
+}
+
+.add:hover {
+  background: rgba(247,189,52,1);
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.4);
+	transform: translate(-.05rem, -.05rem);
+}
+
+.update:hover {
+  background: rgba(247,189,52,1);
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.4);
+	transform: translate(-.05rem, -.05rem);
+}
+
+.delete:hover {
+  background: rgba(247,189,52,1);
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.4);
+	transform: translate(-.05rem, -.05rem);
+}
+/* Since Rent is actually a router-link that generates an achor tag from an endpoint and product ID, it will require some*/
+ /*separate, special styling, though it is under the button section, because functionally, it will have the same purpose  */
+.rent {
+	box-sizing: border-box;
+	/* display: block; */
+	text-decoration: none;
+	color: black;
+}
+
+.rent:hover {
+	background: rgba(247,189,52,1);
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.4);
+	transform: translate(-.05rem, -.05rem);
+}
+/* -------------------------------------------------------------------------------------- */
+
 /* ----------modal Styling ---------------- */
+/* A lot of this modal styling is just wresting control back from bootstrap-vue */
+/* So there will also be some re-declarations of BS-vue's original styles, just to help us understand what is already touched by it */
 
 	.modal-open .modal {
 		overflow-x: hidden;
