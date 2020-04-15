@@ -31,11 +31,16 @@
 .fab {
 	margin-left: 1em;
 	margin-right: 1em;
+	transition: .1s ease;
+	-moz-transition: .1s ease;
+	-o-transition: .1s ease;
+	-webkit-transition: .1s ease;
 }
 
 .fab:hover {
 	cursor: pointer;
 	color: rgb(146, 146, 13);
+	transform: scale(1.2);
 }
 
 
@@ -45,6 +50,7 @@
 	}
 	.fab:hover {
 		cursor: text;
+		transform: scale(1);
 	}
 	p {
 		font-size: .8rem;

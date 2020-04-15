@@ -26,23 +26,23 @@ export default {
 				},
 				      	{
          		id: 1,
-         		text: 'Books',
-         		page: '/books',
-				},
-				      	{
-         		id: 2,
          		text: 'FAQ',
          		page: '/faq',
 				},
 				      	{
-         		id: 3,
+         		id: 2,
          		text: 'Events',
          		page: '/events',
 				},
-				{
-         		id: 4,
+				      	{
+         		id: 3,
          		text: 'About',
          		page: '/about',
+				},
+				{
+         		id: 4,
+         		text: 'Rent/Buy',
+         		page: '/books',
 				},
 			],
 		};
@@ -52,9 +52,9 @@ export default {
 
 <style scoped>
 .navbar {
-	height: 4rem;
+	height: 4.2rem;
 	width: 100%;
-	position: fixed;
+	position: relative;
   	left: 0;
 	top: 0;
   	width: 100%;
@@ -72,16 +72,25 @@ export default {
     height: 5rem;
     overflow: hidden;
 }
+.sblogo:hover{
+	cursor: pointer;
+}
 .navlinks {
-	color: yellow;
+	font-size: 1.3em;
+	color: rgba(247,189,52,1);
 	text-decoration: none;
 	justify-content: space-between;
+}
+.navlinks:hover{
+	cursor: pointer;
+	color: rgb(146, 146, 13);
 }
 .search {
 	height: 1.5rem;
 	width: 9rem;
-	border-radius: 20px;
+	border-radius: 7px;
 	margin-right: 1rem;
-	background-color: white;
+	background-color: rgba(247,189,52,1);
+	padding: .4em;
 }
 </style>
