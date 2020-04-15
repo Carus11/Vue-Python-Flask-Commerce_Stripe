@@ -31,6 +31,7 @@ export default {
    font-family: ;
    text-align: center;
    min-width: 60px;
+   background-color: rgb(238, 238, 226);
   }
 
   h1 {
